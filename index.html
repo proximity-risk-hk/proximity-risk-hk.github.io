@@ -73,9 +73,9 @@
             <div class="video clearfix">
             <div class="wrap">
                 <div class="video-title">Background</div>
-                <font size="5" face="Calibri">Covid-19, especially its Omicron variant, is spreading fast globally with life-threatening symptoms. HK, as with other mainland cities, has “dynamic zero infection” policy. It is crucial to precisely and fast identifying close contacts with the confirmed cases and conduct compulsory testing. Manual contact tracing is excellent to discover precise information, but slow. There have been some works on automated contact tracing in recent years. However, they either are for direct contacts only (e.g., TraceTogether in Singapore) or may raise privacy concern (e.g., health code system in Mainland, China). 
+                <font size="5" face="Calibri">Covid-19, especially its Omicron variant, is spreading fast globally with life-threatening symptoms. HK, as with other mainland cities, has “dynamic zero infection” policy. It is crucial to precisely and fast identifying close contacts with the confirmed cases and conduct compulsory testing. Manual contact tracing is excellent to discover precise information, but slow. Despite some works on automated contact tracing in recent years, they either are for direct contacts only (e.g., TraceTogether in Singapore) or may raise privacy concern (e.g., health code system in Mainland, China). 
                 <br><br>
-                In this work, we study privacy-respecting exposure risk notification for precise contact tracing and safe pathing. With the open data from the Health Department, we first generate a heatmap to demonstrate the infection risk of different areas in a city. Then, with the open data and the locally stored GPS data of users, we propose <font color="#FF0000">automated</font> and <font color="#FF0000">private</font> solution to precisely measure exposure risk for users and guide them avoiding infected areas. Moreover, we propose differential privacy approaches so that a user could upload her/his data in an anonymous and private way to help with epidemic control. Note that no personal information would be used in our solution and all data would only be stored locally unless a user is consent to contribute her/his data.
+                In this work, we study privacy-respecting exposure risk notification for precise contact tracing and safe pathing. With open data from the Health Department, we first generate a heatmap to demonstrate the infection risk of different areas in a city, guiding users avoiding infected areas. Furthermore, with the open data and the locally collected and stored GPS data of users, we propose a <font color="#FF0000">automated</font> and <font color="#FF0000">private</font> solution to precisely measure exposure risk for users. Meanwhile, we propose differential privacy approaches so that a user could decide to upload her/his data in an anonymous and private way to help with epidemic control. Note that no personal information would be used in our solution and all data would be stored locally unless a user is consent to share her/his data.
                     
                 </font>
                 <br>
@@ -88,7 +88,7 @@
         <div class="video clearfix">
             <div class="wrap">
                 <div class="video-title">Infection Risk of areas</div>
-                <font size="5" face="Calibri"> Leveraging the open data (e.g., building visited by comfirmed cases and building required compulsory testing in the past 14 days) from the Health Department, we generate a heapmap to visualize the infection risk of different areas in the city. High-risk or infected areas are shown as heatmap (may have time range and viral intensity) in a timely manner. A dark color indicates high risk. The heatmap would be updated dynamic according to the open data released by the government.
+                <font size="5" face="Calibri"> Leveraging the open data (e.g., building visited by comfirmed cases and building required compulsory testing in the past 14 days) from the Health Department, we generate a heapmap to visualize the infection risk of different areas in a timely manner, guiding users avoiding infected areas. The heatmap would be updated dynamic according to the open data released by the government. A dark color indicates high risk. 
                 </font>
             </div>
             <!-- /.wrap -->
@@ -103,14 +103,14 @@
                 <div class="video-title">Exposure Risk Measure for users</div>
                 <font size="5" face="Calibri"> An APP on user mobile phone continuously collects user GPS data and stores the data locally. Based on the user GPS data and the open data from the Health Department, we propose an approach to measure the exposure risk for any user in terms of spatial, temporal, and sementic dimensions. Both data storage and risk measure are completed on user device locally. Three exposure risk levels are defined in our work:
                     <li><b><font color="#FF0000">Red:</font></b>
-                        Close contact.  Conduct compulsory testing within a certain period (say 2 days).</li>
+                        Close contact. Compulsory testing are required within a certain period (say 2 days).</li>
                     <li><b><font color="#FF8000">Yellow:</font></b> 
                         Medium risk.  Be cautious.  Take safe path and monitor temperature.</li>
                     <li><b><font color="#00FF00">Green:</font></b> 
                         Low risk. Stay vigilant.</li>
                 <br>
 
-                If a user is consent to contribute her/his data for further research and epidemic control (such as compulsory community testing), she/he could upload the data in an anonymous and private manner. The user ID would be dynamic over time and randomly generated. Moreover, we partition a city into grids, and only a grid ID would be uploaded instead of the exact location of the user. The user could also decide whether uploading her/his risk level.
+                If a user is consent to contribute her/his data for further research and epidemic control (such as compulsory community testing), she/he could upload the data in an anonymous and private manner. The user ID would be randomly generated and is dynamic over time. Moreover, we partition a city into grids. Only a grid ID would be uploaded instead of the exact location of the user. The user could also decide whether uploading her/his risk level.
                 </font>
             </div>
             <!-- /.wrap -->
