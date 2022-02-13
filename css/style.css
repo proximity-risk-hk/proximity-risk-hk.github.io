@@ -410,7 +410,7 @@ input:focus::-webkit-input-placeholder {
 
 header {
     padding: 104px 0;
-    background: url(../images/header.jpg) no-repeat 50% 50%;
+    background: url(../images/headerBAK.jpg) no-repeat 50% 50%;
     font: 24px/36px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     -moz-background-size: cover;
@@ -423,14 +423,25 @@ header {
 }
 
 header h1 {
-    font-size: 60px;
+    font-size: 55px;
     line-height: 60px;
     font-weight: 500;
-    margin-bottom: 38px;
+    margin-bottom: 13px;
 }
 
 header h1 span {
     font-weight: 200
+}
+
+header h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 500;
+    margin-bottom: 38px;
+}
+
+header h2 span {
+    font-weight: 100
 }
 
 header .autor {
@@ -471,7 +482,7 @@ header .buttons-wrapper .button-stripe {
 
 .header-wrapper {
     padding-top: 87px;
-    max-width: 655px;
+    max-width: 1655px;
 }
 
 /* footer --------------------------  */
@@ -922,6 +933,11 @@ footer {
   }
 
   header h1 {
+      font-size: 46px;
+      line-height: 52px;
+  }
+
+   header h2 {
       font-size: 46px;
       line-height: 52px;
   }
