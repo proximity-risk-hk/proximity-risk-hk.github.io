@@ -732,12 +732,11 @@ footer {
     text-transform: uppercase;
     margin-bottom: 25px;
 }
-
 .video-subtitle {
     font-size: 19px;
     line-height: 25px;
-    color: #919191;
-    text-align: center;
+    color: #6d6c6c;
+    text-align: justify;
 }
 
 .video {
@@ -1015,6 +1014,18 @@ footer {
       font-size: 36px;
       line-height: 46px;
   }
+  .video-subtitle {
+    font-size: 19px;
+    line-height: 25px;
+    color: #6d6c6c;
+    text-align: justify;
+}
+.dropbtn {
+    display: inline-block;
+ }
+ .dropbtn {
+    display: none;
+ }
 
   .discover-content {
       float: none;
