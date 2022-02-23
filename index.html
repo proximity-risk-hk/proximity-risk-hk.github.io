@@ -57,11 +57,14 @@
                 <div class="header-wrapper">
                     <h1>Private Exposure Risk Notification for Precise Contact Tracing and Safe Pathing:</h1>
                     <h2>&nbsp&nbsp&nbsp&nbspA Big Data Crowdsourcing Approach to Combat Covid-19</h2>
-                    <font size="5" face="Calibri"><a href="https://www.cse.ust.hk/~gchan/">Prof. Gary Chan</a> (gchan@cse.ust.hk)
-                    <br /><a href="https://guanyaoli.github.io/">Guanyao Li</a> (gliaw@cse.ust.hk)
-                </font>
+                    <div class="author-title">
+                    <p>Guanyao Li, Tianlang He, Gary Chan</p>
                     <p>Department of Computer Science and Engineering</p>
-                    <p>HKUST</p>
+                    <p>The Hong Kong University of Science and Technology</p>
+                    <p>{gliaw, theaf, gchan}@cse.ust.hk</p>
+                    </div>
+                    
+
                 </div>
                 <!-- /.header-wrapper -->
             </div>
@@ -79,9 +82,9 @@
             <div class="wrap">
                 <div class="video-title">Background</div>
                 
-                    <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally with life-threatening symptoms. HK, as with other mainland cities, has “dynamic zero infection” policy. It is crucial to precisely and fast identifying close contacts with the confirmed cases and conduct compulsory testing. Manual contact tracing is excellent to discover precise information, but slow. Despite some works on automated contact tracing in recent years, they either are for direct contacts only (e.g., TraceTogether in Singapore) or may raise privacy concern (e.g., health code system in Mainland, China). 
+                    <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally taking toll on many lives.  The infection is often caused by exposure to the virus for sustained period of time, mainly due to visiting the contaminated infected areas.  To protect oneself against the virus, it is hence crucial to understand one’s exposure level in terms of one’s current proximity with the infected areas, the exposure duration, and the nature of the infected areas (restaurants are often of higher risk than others).  Based on the level, one may  take timely self-protection measure to avoid further exposure and to reduce one’s risk of infection.
                 <br><br>
-                In this work, we study privacy-respecting exposure risk notification for precise contact tracing and safe pathing. With open data from the Health Department, we first generate a heatmap to demonstrate the infection risk of different areas in a city, guiding users avoiding infected areas. Furthermore, with the open data and the locally collected and stored GPS data of users, we propose a <font color="#FF0000">automated</font> and <font color="#FF0000">private</font> solution to precisely measure exposure risk for users. Meanwhile, we propose differential privacy approaches so that a user could decide to upload her/his data in an anonymous and private way to help with epidemic control. Note that no personal information would be used in our solution and all data would be stored locally unless a user is consent to share her/his data.
+                The CHP (Centre for Health Protection) of Hong Kong government has already made available to the public much information on infected areas such as <a href="https://chp-dashboard.geodata.gov.hk/covid-19/en.html">buildings with confirmed cases, buildings requiring compulsory testing, and StayHomeSafe buildings</a>. However, these data are largely static and require users to check manually if they are close to them. Some apps have leveraged the data for users to input their current locations to check if they are in proximity of the infected areas. However, they are mostly not automated, and have no assessment on exposure level for users to take appropriate actions.
                     
             </div>
                 <br>
@@ -91,33 +94,81 @@
 
         <br>
 
+        <div class="folium-map" id="map_bcce66b8eec64484bd1b6c1df2e8742c" ></div>
+
         <div class="video clearfix">
             <div class="wrap">
-                <div class="video-title">Infection Risk of areas</div>
-                <div class="video-subtitle"> Leveraging the open data (e.g., building visited by confirmed cases and building required compulsory testing in the past 14 days) from the Health Department, we generate a heatmap to visualize the infection risk of different areas in a timely manner, guiding users avoiding infected areas. The heatmap would be updated dynamic according to the open data released by the government. A dark color indicates high risk. 
+                <div class="video-subtitle"> Making use of big data mining and machine learning techniques, we have designed and developed a novel and private mobile system which integrates all the timely open data from CHP, and visualized it as an easily understandable heatmap.  Users may browse the heatmap to understand the infected areas of their surroundings.  If willing, they may also turn on their GPS to compute automatically and locally their exposure level over time based on their current positions.  Our system has the following two distinct features: 
+                    <li> <b>Big data mining approach for exposure level assessment</b> [1, 2]: We integrate the trustworthy open data sources from CHP and present it as an informative heatmap for users to browse, visualize and navigate. The heatmap, tailored for mobile phone presentation, guides users to avoid infected areas.  The heatmap is updated continuously according to the open data released by the government. 
+                    <br>
+                    Given user’s GPS data, the heatmap is used to compute locally user exposure level based on the proximity, dwell time and type of infection areas.  The computed level is presented as a profile over a certain past period of time (say, 2-5 days) for personal browsing and planning.  An overall cumulative risk indication in color is also provided to the user so that he/she may take timely and appropriate actions to reduce one’s infection risk, such as taking voluntary testing and safe paths:
+                    <p><b><font color="#FF0000">Red:</font></b> Overall sustained long exposure with virus has been detected.  Recommended to take testing.</p>
+                    <p><b><font color="#FF8000">Yellow:</font></b>
+                        Medium risk. Be cautious. Take safe path and monitor temperature.</p>
+                    <p><b><font color="#00FF00">Green:</font></b> 
+                        Low risk. Stay vigilant.</p>
+                    </li>
+
+                    <li> <b>Machine learning approach for power-conserving GPS sampling</b> [3]: Users using the app may opt to turn on their GPS for timely alert or reminder on the infection risk level of their current locations.  To conserve battery power, we have devised and implemented a machine learning approach to estimate user mobility level based on phone’s IMU (inertial measurement unit) so as to adaptively adjust the sampling rate of the GPS.  This reduces the sampling rate, and hence power consumption, by thousands fold.</li>
                 </div>
             </div>
             <!-- /.wrap -->
         </div>
+       
+        <div class="video clearfix">
+            <div class="wrap">
+        <div class="promo-wrapper clearfix">
+                    <div class="promo-column">
+                        <img src="./images/exposure_chart.jpeg" height="64" width="48" alt="">
+                        <b>Exposure data collection.</b>
+                    </div>
+                    
+                    <div class="promo-column">
+                        <img src="./images/infected_area.jpeg" height="64" width="48" alt="">
+                        <b>Possible exposure notification.</b>
+                    </div>
+                </div>
+    </div>
+</div>
+   
 
-         <div class="folium-map" id="map_bcce66b8eec64484bd1b6c1df2e8742c" ></div>
+        <br>
+       
 
-         <br>
+
+
+
+
 
          <div class="video clearfix">
             <div class="wrap">
-                <div class="video-title">Exposure Risk Measure for users</div>
-                <div class="video-subtitle"> An APP on user mobile phone continuously collects user GPS data and stores the data locally. Based on the user GPS data and the open data from the Health Department, we propose an approach to measure the exposure risk for any user in terms of spatial, temporal, and semantic dimensions. Both data storage and risk measure are completed on user device locally. Three exposure risk levels are defined in our work:
-                    <li><b><font color="#FF0000">Red:</font></b>
-                        Close contact. Compulsory testing is required within a certain period (say 2 days).</li>
-                    <li><b><font color="#FF8000">Yellow:</font></b> 
-                        Medium risk.  Be cautious.  Take safe path and monitor temperature.</li>
-                    <li><b><font color="#00FF00">Green:</font></b> 
-                        Low risk. Stay vigilant.</li>
+                
+                <div class="video-subtitle"> We put user privacy as our primary design consideration.  Our system is fully distributed and privacy preserving.  Without any collection of user data, it achieves the ideal case of data minimization in privacy design.  It is meant to provide private information in a local manner to users on their exposure level to virus.  The app achieves full privacy with the following measures: 
+                    <li><i>No user registration:</i> Users do not need to register to use the app.  Anyone may use the app after installing it.
+                       </li>
+                    <li><i>No personal information collection:</i> 
+                        The app does not prompt for and collect any personal information or phone data of its user, such as phone number, contact list, gallery, etc.</li>
+                    <li><i>No data upload and no remote computation:</i> 
+                        Only consolidated and massaged CHP data are downloaded to the users.  No any data are uploaded from the user.  All computations are carried out with results presented locally.</li>
                 <br>
 
                 If a user is consent to contribute her/his data for further research and epidemic control (such as compulsory community testing), she/he could upload the data in an anonymous and private manner. The user ID would be randomly generated and is dynamic over time. Moreover, we partition a city into grids. Only a grid ID would be uploaded instead of the exact location of the user. The user could also decide whether uploading her/his risk level.
                     </div>
+            </div>
+            <!-- /.wrap -->
+        </div>
+
+        <div class="video clearfix">
+            <div class="wrap">
+                <div class="video-title">Reference</div>
+                <font size="5" face="Calibri">
+                    [1] G. Li, S. Hu, S. Zhong, W. Tsui and S.-H. Chan, "vContact: Private WiFi-based IoT Contact Tracing with Virus Lifespan,'' IEEE Internet of Things Journal, to appear. <a href="https://home.cse.ust.hk/~gchan/papers/IoTJ21_vContact.pdf">[Early access in July 2021]</a>
+                    <br>
+                    [2] G. Li, C.-C. Hung, M.Liu, L. Pan, W.-C. Peng and S.-H. Gary Chan, "Spatial-Temporal Similarity for Trajectories with Location Noise and Sporadic Sampling," in Proceedings of 37th IEEE International Conference on Data Engineering (ICDE), Chania, Crete, Greece, pp. 1224-1235, 19 - 22 April, 2021 <a href="https://www.cse.ust.hk/~gchan/papers/ICDE21_STS.pdf">[paper] </a>
+                    <br>
+                    [3] T. He, J. Tan, W. Zhuo, M. Printz and S.-H. Chan, "Tackling Multipath and Biased Training Data for IMU-Assisted BLE Proximity Detection," in Proceedings of IEEE International Conference on Computer Communications (IEEE INFOCOM), Virtual Conference, IEEE, 2-5 May, 2022.<a href="./paper/version_infocom2022.pdf"> [paper]</a>
+                    <br>
+                </font>
             </div>
             <!-- /.wrap -->
         </div>
