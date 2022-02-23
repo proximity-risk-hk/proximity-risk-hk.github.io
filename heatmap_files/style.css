@@ -564,12 +564,19 @@ footer {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 25%;
+    width: 30%;
+    text-align:center;
+    left: 20.0%;
+    margin-left:100px;
+    margin-right:100px;
 }
 
 .promo-column img {
+    margin: auto;
     display: block;
+    
     margin-bottom: 23px;
+    text-align:center;
 }
 
 .promo-column h5 {
@@ -732,6 +739,11 @@ footer {
     text-transform: uppercase;
     margin-bottom: 25px;
 }
+.author-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
 .video-subtitle {
     font-size: 19px;
     line-height: 25px;
@@ -888,8 +900,11 @@ footer {
 }
 
 .discover-img {
+    padding: 0 15px 16px;
     float: left;
-    width: 50%;
+    width: 30%;
+    left: 20.0%;
+    
 }
 
 .discover-img img {
@@ -952,11 +967,13 @@ footer {
       margin-right: auto;
       float: none;
       text-align: center;
+      left: 20.0%;
   }
 
   .promo-column img {
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
   }
 
   .simple-content {
@@ -1040,13 +1057,15 @@ footer {
       line-height: 60px;
   }
 
+
   .discover-img {
-      float: none;
+      float: left;
       width: auto;
+      text-align: center;
   }
 
   .discover-img img {
-      margin: 0 auto
+      margin: 0px 150px
   }
 
   .discover-button {
