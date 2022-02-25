@@ -481,6 +481,7 @@ header .buttons-wrapper .button-stripe {
 }
 
 .header-wrapper {
+    text-align: center;
     padding-top: 87px;
     max-width: 1655px;
 }
@@ -935,6 +936,7 @@ footer {
   }
 
   .header-wrapper {
+      text-align: center;
       padding-top: 0;
       max-width: none;
   }
@@ -946,11 +948,13 @@ footer {
   }
 
   header h1 {
+      text-align: center;
       font-size: 46px;
       line-height: 52px;
   }
 
    header h2 {
+      text-align: center;
       font-size: 46px;
       line-height: 52px;
   }
