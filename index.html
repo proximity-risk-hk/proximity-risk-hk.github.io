@@ -55,7 +55,7 @@
             <div class="wrap">
                 
                 <div class="header-wrapper">
-                    <h1>Privacy-Preserving Assessment of Covid-19 Exposure:</h1>
+                    <h1>Private Assessment of Covid-19 Exposure:</h1>
                     <h2>A Big Data Machine Learning Approach</h2>
                     <div class="author-title">
                     <p>Guanyao Li, Tianlang He, Gary Chan</p>
@@ -82,9 +82,9 @@
             <div class="wrap">
                 <div class="video-title">Background</div>
                 
-                    <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally taking toll on many lives.  The infection is often caused by exposure to the virus for sustained period of time, mainly due to visiting the contaminated infected areas.  To protect oneself against the virus, it is hence crucial to understand one’s exposure level in terms of one’s current proximity with the infected areas, the exposure duration, and the nature of the infected areas (restaurants are often of higher risk than others).  Based on the level, one may  take timely self-protection measure to avoid further exposure and to reduce one’s risk of infection.
+                    <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally taking toll on many lives.  The infection is often caused by exposure to the virus for sustained period of time, mainly due to coming into contact with the contaminated infected areas.  To protect oneself against the virus, it is crucial to understand one’s exposure level in terms of one’s proximity from the infected areas, the exposure duration, and the nature of the infected areas (restaurants are often of higher risk).  Based on the level, one may take timely and appropriate measures such as health monitoring, voluntary testing, or avoiding further exposure to reduce one’s risk of infection.
                 <br><br>
-                The CHP (Centre for Health Protection) of Hong Kong government has already made available to the public much information on infected areas such as <a href="https://chp-dashboard.geodata.gov.hk/covid-19/en.html">buildings with confirmed cases, buildings requiring compulsory testing, and StayHomeSafe buildings</a>. However, these data are largely static and require users to check manually if they are close to them. Some apps have leveraged the data for users to input their current locations to check if they are in proximity of the infected areas. However, they are mostly not automated, and have no assessment on exposure level for users to take appropriate actions.
+                The CHP (Centre for Health Protection) of Hong Kong government has already made available to the public much information on infected areas such as buildings with confirmed cases, buildings requiring compulsory testing, and StayHomeSafe buildings. However, these data are largely static and require users to check manually if they are close to the infected areas. Some apps have leveraged the data for users to check whether their current locations are in proximity of the infected areas. However, they are mostly not automated, and have no assessment on exposure level for users to take appropriate actions.
                     
             </div>
                 <br>
@@ -98,18 +98,18 @@
 
         <div class="video clearfix">
             <div class="wrap">
-                <div class="video-subtitle"> Making use of big data mining and machine learning techniques, we have designed and developed a novel and private mobile system which integrates all the timely open data from CHP, and visualized it as an easily understandable heatmap.  Users may browse the heatmap to understand the infected areas of their surroundings.  If willing, they may also turn on their GPS to compute automatically and locally their exposure level over time based on their current positions.  Our system has the following two distinct features: 
-                    <li> <b>Big data mining approach for exposure level assessment</b> [1, 2]: We integrate the trustworthy open data sources from CHP and present it as an informative heatmap for users to browse, visualize and navigate. The heatmap, tailored for mobile phone presentation, guides users to avoid infected areas.  The heatmap is updated continuously according to the open data released by the government. 
+                <div class="video-subtitle"> We have designed and developed a novel and private mobile system which integrates all the timely open data from CHP, and visualized it as an easily understandable heatmap.  Users may browse the heatmap to understand where the infected areas are.  If willing, they may turn on their GPS to compute automatically and locally their location-based exposure level over time.  Our system is based on the following approaches: 
+                    <li> <b>Big data mining for exposure level assessment</b> [1, 2]: We integrate the open data sources from CHP and present it as an informative heatmap for users to browse, visualize and understand effectively where infected areas are. The heatmap is updated continuously as released by the government. 
                     <br>
-                    Given user’s GPS data, the heatmap is used to compute locally user exposure level based on the proximity, dwell time and type of infection areas.  The computed level is presented as a profile over a certain past period of time (say, 2-5 days) for personal browsing and planning.  An overall cumulative risk indication in color is also provided to the user so that he/she may take timely and appropriate actions to reduce one’s infection risk, such as taking voluntary testing and safe paths:
-                    <p><b><font color="#FF0000">Red:</font></b> Overall sustained long exposure with virus has been detected.  Recommended to take testing.</p>
+                    If the user turns on GPS, the heatmap can be used to compute locally user exposure level based on the proximity, dwell time and type of infection areas by taking into account of GPS location error.  The computed level is presented as a profile over a certain past period of time (say, 2-5 days) for personal and private browsing and planning.  An overall cumulative risk indication in color is also provided so that he/she may take timely and appropriate actions to reduce one’s infection risk, such as taking voluntary testing and safe paths:
+                    <p><b><font color="#FF0000">Red:</font></b> Overall sustained high exposure with virus has been detected.  Recommended to take testing and monitor health.</p>
                     <p><b><font color="#FF8000">Yellow:</font></b>
-                        Medium risk. Be cautious. Take safe path and monitor temperature.</p>
+                        Medium risk. Be cautious. Take safe path to reduce risk.</p>
                     <p><b><font color="#00FF00">Green:</font></b> 
                         Low risk. Stay vigilant.</p>
                     </li>
 
-                    <li> <b>Machine learning approach for power-conserving GPS sampling</b> [3]: Users using the app may opt to turn on their GPS for timely alert or reminder on the infection risk level of their current locations.  To conserve battery power, we have devised and implemented a machine learning approach to estimate user mobility level based on phone’s IMU (inertial measurement unit) so as to adaptively adjust the sampling rate of the GPS.  This reduces the sampling rate, and hence power consumption, by thousands fold.</li>
+                    <li> <b>Machine learning for power-conserving GPS sampling</b> [3]: Users using the app may opt to turn on their GPS to compute location-based exposure level.  To conserve battery power, we have devised and implemented a machine learning approach to adaptively adjust the sampling rate of the GPS according to user mobility intensity as inferred from phone’s IMU (inertial measurement unit).  This greatly reduces the GPS sampling rate, and hence power consumption, by more than 99%.</li>
                 </div>
             </div>
             <!-- /.wrap -->
@@ -143,16 +143,16 @@
          <div class="video clearfix">
             <div class="wrap">
                 
-                <div class="video-subtitle"> We put user privacy as our primary design consideration.  Our system is fully distributed and privacy preserving.  Without any collection of user data, it achieves the ideal case of data minimization in privacy design.  It is meant to provide private information in a local manner to users on their exposure level to virus.  The app achieves full privacy with the following measures: 
-                    <li><i>No user registration:</i> Users do not need to register to use the app.  Anyone may use the app after installing it.
+                <div class="video-subtitle"> User privacy is our primary design consideration. Our system is fully distributed and privacy preserving. It is meant to provide exposure information in a local manner to users.  The app achieves full privacy with the following measures: 
+                    <li><i>No user registration:</i> Users do not need to register to use the app after installation.
                        </li>
-                    <li><i>No personal information collection:</i> 
-                        The app does not prompt for and collect any personal information or phone data of its user, such as phone number, contact list, gallery, etc.</li>
-                    <li><i>No data upload and no remote computation:</i> 
-                        Only consolidated and massaged CHP data are downloaded to the users.  No any data are uploaded from the user.  All computations are carried out with results presented locally.</li>
+                    <li><i>No personal information collection beyond GPS location:</i> 
+                        The app respects data minimization in privacy design. It does not ask for any personal information beyond GPS location. It takes no phone data of its user, such as phone number, contact list, gallery, etc.</li>
+                    <li><i>No user data upload:</i> 
+                        Only consolidated CHP public data are downloaded to the users.  No any data are uploaded from the user to the server.  All computations are carried out with results presented in local phone only.</li>
+                    <li><i>No GPS storage:</i> Users may opt to provide their current GPS locations to the app for exposure level assessment at any time.  The exposure level is computed in real time, and once it is computed, the GPS data are immediately discarded.  What is stored locally is the computed exposure profile over a certain past period of time (e.g., 2-5 days). </li>
                 <br>
 
-                If a user is consent to contribute her/his data for further research and epidemic control (such as compulsory community testing), she/he could upload the data in an anonymous and private manner. The user ID would be randomly generated and is dynamic over time. Moreover, we partition a city into grids. Only a grid ID would be uploaded instead of the exact location of the user. The user could also decide whether uploading her/his risk level.
                     </div>
             </div>
             <!-- /.wrap -->
