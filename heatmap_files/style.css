@@ -586,11 +586,14 @@ footer {
     width: 70%;
     text-align:center;
     left: 25.0%;
-    margin-left:200px;
+    margin: 0 auto;
+    position: relative;
+    left: 15.0%;
+    top: 0.0%;
 }
 
 .heatmap img {
-    margin: auto;
+    margin: 0 auto;
     display: block;
     text-align:center;
 }
