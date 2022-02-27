@@ -6,7 +6,7 @@
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
         </script>
-    <title>Exposure Risk HK</title>
+    <title>Covid Exposure Level in HK</title>
     <meta name="description" content="Privacy-Preserving Assessment of Covid-19 Exposure:">
     <meta name="keywords" content="Privacy-Preserving Assessment of Covid-19 Exposure:">
     <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
@@ -80,7 +80,7 @@
 
             <div class="video clearfix">
             <div class="wrap">
-                <div class="video-title">Background</div>
+                
                 
                     <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally taking toll on many lives.  The infection is often caused by exposure to the virus for sustained period of time, mainly due to coming into contact with the contaminated infected areas.  To protect oneself against the virus, it is crucial to understand one’s exposure level in terms of one’s proximity from the infected areas, the exposure duration, and the nature of the infected areas (restaurants are often of higher risk).  Based on the level, one may take timely and appropriate measures such as health monitoring, voluntary testing, or avoiding further exposure to reduce one’s risk of infection.
                 <br><br>
@@ -94,12 +94,23 @@
 
         <br>
 
-        <div class="folium-map" id="map_bcce66b8eec64484bd1b6c1df2e8742c" ></div>
+        
+
+        <div class="video clearfix">
+            <div class="heatmap">
+                <a href="https://guanyaoli.github.io/files/heatmap.html">
+                    <img src="./images/heatmap.png" height="64" width="48" alt="">
+                </a>
+                <a href="https://guanyaoli.github.io/files/heatmap.html"><b>Infected areas.</b></a>
+                        
+            </div>
+        </div>
+
 
         <div class="video clearfix">
             <div class="wrap">
                 <div class="video-subtitle"> We have designed and developed a novel and private mobile system which integrates all the timely open data from CHP, and visualized it as an easily understandable heatmap.  Users may browse the heatmap to understand where the infected areas are.  If willing, they may turn on their GPS to compute automatically and locally their location-based exposure level over time.  Our system is based on the following approaches: 
-                    <li> <b>Big data mining for exposure level assessment</b> [1, 2]: We integrate the open data sources from CHP and present it as an informative heatmap for users to browse, visualize and understand effectively where infected areas are. The heatmap is updated continuously as released by the government. 
+                    <li> <b>Big data mining to assess environmental exposure level</b> [1, 2]: We integrate the open data sources from CHP and present it as an informative heatmap for users to browse, visualize and understand effectively where infected areas are. The heatmap is updated continuously as released by the government. 
                     <br>
                     If the user turns on GPS, the heatmap can be used to compute locally user exposure level based on the proximity, dwell time and type of infection areas by taking into account of GPS location error.  The computed level is presented as a profile over a certain past period of time (say, 2-5 days) for personal and private browsing and planning.  An overall cumulative risk indication in color is also provided so that he/she may take timely and appropriate actions to reduce one’s infection risk, such as taking voluntary testing and safe paths:
                     <p><b><font color="#FF0000">Red:</font></b> Overall sustained high exposure with virus has been detected.  Recommended to take testing and monitor health.</p>
