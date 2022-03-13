@@ -35,7 +35,6 @@
     <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
 </head>
 <body>    
-            <p id="demo"></p>
     
             <div class="folium-map" id="map_904a27eaac184b069b98a5cd32fc3659" ></div>
         
@@ -103,6 +102,9 @@
                 {}
             ).addTo(map_904a27eaac184b069b98a5cd32fc3659);
             }
-            
+    
+    let scale = L.control.scale()
+    scale.addTo(map_904a27eaac184b069b98a5cd32fc3659)
+    
         
 </script>
