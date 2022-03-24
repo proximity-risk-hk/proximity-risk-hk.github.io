@@ -565,11 +565,10 @@ footer {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 30%;
+    width: 33%;
     text-align:center;
-    left: 20.0%;
-    margin-left:100px;
-    margin-right:100px;
+    left: 5.0%;
+    
 }
 
 .promo-column img {
