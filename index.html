@@ -61,13 +61,13 @@
                 
 
                 <div class="header-wrapper">
-                    <h2>Assessing the Proximity and Risk with Covid-infected Places for Mobile Users:
+                    <h2>Proximity and Risk with Covid-infected Places for Mobile Users:
                     A Big Data Machine Learning Approach</h2>
                     <div class="author-title">
-                    <p>Guanyao Li, Tianlang He, Gary Chan</p>
+                    <p>Guanyao Li, Tianlang He, Wai Lun Tsui, Gary Chan</p>
                     <p>Department of Computer Science and Engineering</p>
                     <p>The Hong Kong University of Science and Technology</p>
-                    <p>{gliaw, theaf, gchan}@cse.ust.hk</p>
+                    <p>{gliaw, theaf, ptsuiwl, gchan}@cse.ust.hk</p>
                     </div>
                     
 
@@ -90,7 +90,9 @@
                 
                     <div class="video-subtitle">Covid-19, especially its Omicron variant, is spreading fast globally taking toll on many lives.  The infection is often caused by exposure to the virus for sustained period of time due to close distancing with the contaminated places, the so-called <b>proximity risk</b>.  Proximity risk is related to not only exposure duration and physical distance to the Covid-infected places, but also the location noise and the number and nature of the venues (restaurants or places with large number of confirmed cases are often of higher risk). This work is to provide timely information to mobile users of the infected places in their neighborhood, and assess in private the proximity risk with these places over time. Armed with such knowledge, mobile users may then take appropriate actions to plan routes, manage one’s health, and keep safe distancing from these places.
                 <br><br>
-                To inform citizens, the Centre of Health Protection (CHP), Department of Health, The Government of HKSAR, currently has already made known to the general public <a href = 'https://chp-dashboard.geodata.gov.hk/covid-19/en.html'>a dashboard</a> showing buildings with case resided/visited in the past 14 days, buildings requiring compulsory testing, StayHomeSafe buildings (buildings with quarantined patients), etc.  However, these data are currently presented as a static webpage, and require users to check manually without real-time GPS support for mobile users.  Some apps leverage the data by asking users to input locations in order to check if they are in proximity to the incident places.  However, they are mostly not automatic, and offer no assessment of proximity risk over time for users to take appropriate proactive measures.
+
+                To inform citizens, The Government of HKSAR currently makes known to the general public <a href = 'https://chp-dashboard.geodata.gov.hk/covid-19/en.html'>a dashboard</a> showing buildings with case resided/visited in the past 14 days.  However, these data are presented as a static webpage, and require users to check manually without real-time GPS support for mobile users.  Some apps leverage the data by asking users to input locations in order to check if they are in proximity to the incident places.  However, they are mostly not automatic, and offer no assessment of proximity risk over time for users to take appropriate proactive measures.
+
 
             </div>
                 
@@ -115,7 +117,7 @@
                 <div class="video-subtitle"> Using the open <a href = 'https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-novel-infectious-agent'>Data in Coronavirus Disease</a> provided by the Department of Health accessible through <a href= 'https://data.gov.hk/en/'>data.gov.hk</a> (“List of buildings visited by cases tested positive for SARS-CoV-2 virus in the past 14 days”), we have designed and developed a novel, private and automated mobile-friendly app which integrates the data and visualizes them as an easily accessible heatmap pinpointing the incident places as hotspots.  Mobile users may browse the heatmap to understand where the places with infected cases are, and make informed decision on whether they should keep safe distancing from them.  They may optionally turn on their GPS to check automatically and locally the proximity risk in real time.  Our mobile computing system makes use of the following approaches: 
                     <li> <b>Big data mining to assess proximity risk [1, 2]:</b> We integrate the open and trustworthy data sources provided by Department of Health and present it as an informative, mobile-friendly and user-accessible heatmap for browsing, visualization and understanding at a quick glance where the incident places are.  The heatmap is updated continuously according to government release.  
  
-                    If the user turns on GPS, the heatmap can be used to automatically pinpoint one’s current location with respect to these areas, and alert the user if there are such buildings in proximity.  The app also computes locally user proximity risk based on the distance, location noise, dwell time, number and nature of the places in the neighborhood.  The number of places in proximity is charted in real time and the overall proximity risk is indicated as a color bar. Based on this information, the user may take timely and appropriate actions to manage health, plan routes and keep proper distancing to reduce infection risk:
+                    If the user turns on GPS, the heatmap can be used to automatically pinpoint one’s current location with respect to these areas, and the app alerts the user if there are such buildings in proximity.  The number of incident places in proximity is presented in real time.  Furthermore, the overall proximity risk is indicated as a colored triangle of a radar chart indicating the quantity level of places, contact duration and proximity level.  Based on this information, the user may take timely and appropriate actions to manage health, plan routes and keep proper distancing to reduce infection risk:
 
                     <p><b><font color="#FF0000">Red:</font></b> Overall high sustained proximity level to incident places.  Recommended to avoid high-risk places, manage health and take voluntary testing if necessary.</p>
                     <p><b><font color="#FF8000">Yellow:</font></b>
@@ -148,8 +150,8 @@
 
 
                     <div class="promo-column">
-                        <img src="./images/exposure_chart.jpeg" height="64" width="48" alt="">
-                        <b>Number of places with Covid cases within 100m and overall proximity risk.</b>
+                        <img src="./images/exposure_chart_new.jpg" height="64" width="48" alt="">
+                        <b>Number of places with Covid cases within 100m and radar chart.</b>
                     </div>
                     
                 </div>
@@ -196,6 +198,26 @@
             </div>
             <!-- /.wrap -->
         </div>
+
+        <div class="video clearfix">
+            <div class="wrap">
+                
+                <div class="video-subtitle"> The app is currently available in Google Play Store in Hong Kong with the link <a href = https://play.google.com/store/apps/details?id=hk.ust.cia>https://play.google.com/store/apps/details?id=hk.ust.cia</a>, or may be accessed directly by scanning or clicking the following QR code:
+
+                    </div>
+
+                <div class="heatmap">
+                <
+                    <img src="./images/QR_code.jpg" height="64" width="48" alt="", styles = "margin: 0 auto;">
+                
+                
+                        
+            </div>
+            </div>
+            <!-- /.wrap -->
+        </div>
+
+
         
 
 
